@@ -13,3 +13,25 @@ Screen 1:
 - The list should support Lazy Loading. When scrolled to the bottom of the list, start lazy loading next page of products and append it to the list.
 Screen 2:
 - Second screen should display details of the product.
+
+
+Assignment complete with:
+
+Helpers
+   - Image cache
+   - String extension: converts HTML formatted text to string
+
+Network Manager
+   - Facilitates the handling of web resources: uploading and downloading
+
+Models
+   - Product: contains information pertaining to specific product
+   - Product Container: contains summary of products
+
+ViewModels
+   - Contains business logic that begins downloading products for displaying to user
+      - Contains information about products downloaded
+
+Views
+   - Custom View: table view cell that contains brief product information
+   - Controllers: contain logic for displaying list of products and for displaying detailed product information on a selected product
