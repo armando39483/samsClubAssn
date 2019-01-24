@@ -43,7 +43,10 @@ final class ProductsPageViewController: UIPageViewController {
     /// Make each new VC, setup with information, or return nil
     private func detailsVC(at: Int) -> ProductDetailsController? {
         if (at < 0) { return nil }
-        if (at > self.viewModel.productCount - 1) { return nil }
+        
+        if (at == self.viewModel.productCount - 1) {
+            self.viewModel.loadNextProducts()
+        }
         
         let vc = ProductDetailsController.newVC()
         vc.productInfo = self.viewModel.productInfo(at: at)
